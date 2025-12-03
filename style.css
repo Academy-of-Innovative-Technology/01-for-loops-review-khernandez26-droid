@@ -1,1 +1,16 @@
 
+.btn-primary {
+
+    background-color: #83b95a;
+    border-color: #ffffff;
+}
+
+.btn-primary:hover {
+
+    background-color: #419498;
+    border-color: #ffffff;
+}
+
+.badge.bg-primary {
+  background-color: #ccb90f !important; /* Red/coral */
+}
