@@ -1,5 +1,5 @@
 
-// Helper function to create animated chip output
+
 function createChip(value) {
   const chip = document.createElement('span');
   chip.className = 'badge bg-primary me-1 mb-1';
@@ -9,7 +9,7 @@ function createChip(value) {
   return chip;
 }
 
-// Animate chip appearance
+
 function animateChip(chip) {
   setTimeout(() => {
     chip.style.transition = 'all 0.3s ease';
@@ -18,7 +18,7 @@ function animateChip(chip) {
   }, 10);
 }
 
-// Main loop function with animation
+
 async function runLoop(start, end, step, filter, resultElement, delay = 100) {
   resultElement.innerHTML = '';
   
@@ -29,7 +29,7 @@ async function runLoop(start, end, step, filter, resultElement, delay = 100) {
     return true;
   };
   
-  // Determine direction
+
   const isIncreasing = step > 0;
   
   for (let i = start; isIncreasing ? i <= end : i >= end; i += step) {
@@ -42,11 +42,11 @@ async function runLoop(start, end, step, filter, resultElement, delay = 100) {
   }
 }
 
-// Initialize all cards
+
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('#cards .card');
   
-  // Card 1: Count Up 1 → 15
+  
   const card1 = cards[0];
   const card1Run = card1.querySelector('.btn-primary');
   const card1Reset = card1.querySelector('.btn-outline-secondary');
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card1Result.innerHTML = '';
   });
   
-  // Card 2: Count Down 15 → 1
+  
   const card2 = cards[1];
   const card2Run = card2.querySelector('.btn-primary');
   const card2Reset = card2.querySelector('.btn-outline-secondary');
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card2Result.innerHTML = '';
   });
   
-  // Card 3: Count Up 1 → 30 (odd only)
+  
   const card3 = cards[2];
   const card3Run = card3.querySelector('.btn-primary');
   const card3Reset = card3.querySelector('.btn-outline-secondary');
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card3Result.innerHTML = '';
   });
   
-  // Card 4: Multiples of 5 (30 → 0)
+
   const card4 = cards[3];
   const card4Run = card4.querySelector('.btn-primary');
   const card4Reset = card4.querySelector('.btn-outline-secondary');
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card4Result.innerHTML = '';
   });
   
-  // Card 5: Full Range −50 → 50
+ 
   const card5 = cards[4];
   const card5Run = card5.querySelector('.btn-primary');
   const card5Reset = card5.querySelector('.btn-outline-secondary');
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card5Result.innerHTML = '';
   });
   
-  // Card 6: Multiples of 2 (-50 → 50)
+ 
   const card6 = cards[5];
   const card6Run = card6.querySelector('.btn-primary');
   const card6Reset = card6.querySelector('.btn-outline-secondary');
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card6Result.innerHTML = '';
   });
   
-  // Playground
+  
   const pgRun = document.getElementById('pg-run');
   const pgReset = document.getElementById('pg-reset');
   const pgStart = document.getElementById('pg-start');
